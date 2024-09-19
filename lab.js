@@ -30,9 +30,9 @@
 
 
 
-for (let i = 1; i <= 100; i++){
-    console.log((i % 3 == 0 ? 'Fizz' : '') + (i % 5 == 0 ? 'Buzz' : '') || (i))
-}
+// for (let i = 1; i <= 100; i++){
+//     console.log((i % 3 == 0 ? 'Fizz' : '') + (i % 5 == 0 ? 'Buzz' : '') || (i))
+// }
 
 
 
@@ -57,18 +57,20 @@ for (let i = 1; i <= 100; i++){
 //  }
 // console.log(n)
 
-let n = 7
-while(n < 100){
-    n++
-//     if (6 * n - 1){
-//         console.log(n)
-// }
-    if (n % 2 !== 0 && n % 3 && n % 5){
-        break;
+
+
+// let n = 7
+// while(n < 100){
+//     n++
+// //     if (6 * n - 1){
+// //         console.log(n)
+// // }
+//     if (n % 2 !== 0 && n % 3 && n % 5){
+//         break;
        
-    } 
-}
-console.log(n)
+//     } 
+// }
+// console.log(n)
 
 
 
@@ -85,8 +87,19 @@ console.log(n)
 // There will only be 4 cells per row.
 // There will be no escaped characters other than “\n”.
 
-  let CSV = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26"
+// let string = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26"
+// let row = '';
+// let cell = '';
 
+// for(let i = 0; i < string.length; i++){
+//     // console.log(csv.length);
+
+//     // if()
+//     string[string.length - 1]
+    
+//     console.log(string)
+
+// }
 
 
 
@@ -119,30 +132,50 @@ console.log(n)
     // ]
     
 
-    let start = 0
-    let x = [];
+    let row = [];
+    let cell = '';
+    // let x = [];
         // let all = allCSV.splice('\n')
         // for (let i = 0; i < rows.length; i++)
-    while (start < allCSV.length) {
-        let rEnd = allCSV.indexOf('\n', start);
-        if (rEnd === -1) {
-            rEnd = allCSV.length;
-        }  
-           
-        let rStart = start;
-        let row = [];
-        
-        while (rStart < rEnd) {
-            let CEnd = allCSV.indexOf('\n', rStart);
-            if (CEnd === -1 || CEnd >= rEnd) CEnd = rEnd;
-            let value = allCSV.slice(rStart, CEnd);
-            row.push(value);
-            rStart = CEnd + 1;
+
+    for(let i = 0; i < allCSV.length; i++){
+        // let row = char.forEach(el) {
+        //     console.log(row)
+        // }
+        switch (allCSV[i]){
+            case ',':
+                // row = row + cell + ''; // didn't work
+                row[row.length] = cell;
+                cell = '';
+                break;
+            case '\n':
+                // row = row + cell + '';  //didn't work 
+                row[row.length] = cell;
+                console.log(row)
+                row = [];
+                cell = '';
+                break;
+            default:
+                cell += allCSV[i];
+                break;
         }
-        x.push(row);
-        start = rEnd + 1;
-    }
-    console.log(x)
+        if (i  == allCSV.length - 1){
+            row = row + cell;
+            console.log([row])
+            
+        }
+}
+    // while (start < allCSV.length) {
+    //     let rEnd = allCSV.indexOf('\n', start);
+    //     if (rEnd === -1) {
+    //         rEnd = allCSV.length;
+    //     }  
+           
+  
+    //     x.push(row);
+    //     start = rEnd + 1;
+    // }
+    // console.log(x)
     
     
     
@@ -161,27 +194,27 @@ console.log(n)
     ["63", "Blaine", "Quiz Master", "58"],
     ["98", "Bill", "Doctor’s Assistant", "26"]]
         // let starts = 0;
-    let section = [];
-        // emplty array
-    let y = [];
+    // let section = [];
+    //     // emplty array
+    // let y = [];
     
-    for (let i = 0; i < a[0,1].length; i++) {
-            // make lowercase
-        section.push(a[0][i].toLowerCase());
-    }
+    // for (let i = 0; i < a[0].length; i++) {
+    //         // make lowercase
+    //     section.push(a[0][i].toLowerCase());
+    // }
     
-    for (let rowI = 0; rowI < a.length; rowI++) {
-        let row = a[rowI];
-        let allObject = {};
-    
-    
-        y.push(allObject);
-    }
-    
-    console.log(y)
+    // for (let rowI = 0; rowI < a.length; rowI++) {
+    //     let row = a[rowI];
+    //     let allObject = {};
     
     
+    //     y.push(allObject);
+    // }
     
+    // console.log(y)
+    
+    
+ 
     
     
     // Part 4: Sorting and Manipulating Data
@@ -198,10 +231,10 @@ console.log(n)
         { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
         { id: "98", name: "Bill", occupation: "Doctor’s Assistant", age: "26" }]
     
-   b.pop()
-   b.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25" })
-   b.splice(4,0, { id: "7", name: "Bilbo", occupation: "None", age: "111" })
-   console.log(b)    
+//    b.pop()
+//    b.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25" })
+//    b.splice(4,0, { id: "7", name: "Bilbo", occupation: "None", age: "111" })
+//    console.log(b)    
     
     
     
@@ -217,9 +250,9 @@ console.log(n)
 
     
     
-    for (let i = 0; i < c.length; i++) {
+    // for (let i = 0; i < c.length; i++) {
         
-    }
+    // }
     
     
     
