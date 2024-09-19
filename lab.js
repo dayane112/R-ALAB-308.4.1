@@ -30,9 +30,9 @@
 
 
 
-// for (let i = 1; i <= 100; i++){
-//     console.log((i % 3 == 0 ? 'Fizz' : '') + (i % 5 == 0 ? 'Buzz' : '') || (i))
-// }
+for (let i = 1; i <= 100; i++){
+    console.log((i % 3 == 0 ? 'Fizz' : '') + (i % 5 == 0 ? 'Buzz' : '') || (i))
+}
 
 
 
@@ -59,18 +59,18 @@
 
 
 
-// let n = 7
-// while(n < 100){
-//     n++
-// //     if (6 * n - 1){
-// //         console.log(n)
-// // }
-//     if (n % 2 !== 0 && n % 3 && n % 5){
-//         break;
-       
-//     } 
+let n = 7
+while(n < 100){
+    n++
+//     if (6 * n - 1){
+//         console.log(n)
 // }
-// console.log(n)
+    if (n % 2 !== 0 && n % 3 && n % 5){
+        break;
+       
+    } 
+}
+console.log(n)
 
 
 
@@ -231,10 +231,10 @@
         { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
         { id: "98", name: "Bill", occupation: "Doctor’s Assistant", age: "26" }]
     
-//    b.pop()
-//    b.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25" })
-//    b.splice(4,0, { id: "7", name: "Bilbo", occupation: "None", age: "111" })
-//    console.log(b)    
+   b.pop()
+   b.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25" })
+   b.splice(4,0, { id: "7", name: "Bilbo", occupation: "None", age: "111" })
+   console.log(b)    
     
     
     
